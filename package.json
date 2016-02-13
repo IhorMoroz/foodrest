@@ -1,0 +1,19 @@
+{
+  "name": "foodrest",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IM",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.2.0"
+  }
+}
