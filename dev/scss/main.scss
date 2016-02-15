@@ -480,7 +480,85 @@ section{
         }
     }
     // AND HOME PAGE
-    
+    // NEWS PAGE
+    .backNews{
+        height: auto;
+        background: url("../img/back/back3.png");
+        .boxNews{
+            padding: 20px;
+            .news{
+                margin:17px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 250px;
+                height: auto;
+                background: #fff;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                .img{
+                    width: 100%;
+                    height: 150px;
+                    overflow: hidden;
+                    a{
+                        margin:0;
+                        padding: 0;
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                            transition: all 1s;
+                            &:hover{
+                                transform: scale(2);
+                            }
+                        }
+                    }
+                }
+                a{
+                    text-decoration: none;
+                }
+                .title{
+                    margin: 10px 0px;
+                    padding: 0px 5px;
+                    font-size: 24px;
+                    font-family:$IndieF;
+                    text-align: center;
+                    text-transform: capitalize;
+                    color:$mainColor;
+                    &:hover{
+                        color:#2680E3;
+                    }
+                }
+                .desc{
+                    padding: 0px 5px;
+                    font-size: 15px;
+                    line-height: 16px;
+                    text-align: center;
+                    color:#000;
+                    font-family: $Inconsolata;
+                }
+                span{
+                    margin:5px 0px;
+                    padding: 0px 10px;
+                    font-family: $Inconsolata;
+                    font-weight: bold;
+                    font-size: 15px;
+                    color:#000;
+                }
+                a{
+                    display: block;
+                    margin: 5px 0px;
+                    padding: 0px 5px;
+                    font-size: 24px;
+                    font-family:$IndieF;
+                    text-transform: capitalize;
+                    color:$mainColor;
+                    &:hover{
+                        color:#2680E3;
+                    }
+                }
+            }
+        }
+    }
+    // AND NEWS PAGE
+
 }
 // MODAL
 .modal-title{
