@@ -6,6 +6,13 @@ $IndieF:'Indie Flower', cursive;
 $Inconsolata:'Inconsolata';
 $mainColor:#e7a331;
 $widthSite:1200px;
+@mixin clearfix {
+  &:after, &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 *{
     box-sizing: border-box;
 }
@@ -558,6 +565,103 @@ section{
         }
     }
     // AND NEWS PAGE
+    // FOODMENU PAGE
+    .backFoodMenu{
+        background: url("../img/back/back4.png");
+        .foodMenu{
+            padding: 20px 0px;
+            ul{
+                li{
+                    display: inline-block;
+                    margin:0px 16px;
+                    a{
+                        text-decoration: none;
+                        text-align: center;
+                        text-transform: capitalize;
+                        display: inline-block;
+                        font-family: $IndieF;
+                        font-size: 18px;
+                        color:transparent;
+                        border-bottom: 1px solid #fff;
+                        transition: all .3s;
+                        &:hover{
+                            color:#fff;
+                        }
+                    }
+                }
+            }
+            .content{
+                padding:20px 0px;
+                @include clearfix;
+                .boxList{
+                    float:right;
+                    width: 700px;
+                    height: auto;
+                    background: #fff;
+                    h2{
+                        margin: 10px;
+                        font-size: 30px;
+                        font-family: $IndieF;
+                        text-align: center;
+                        text-transform: capitalize;
+                    }
+                    table{
+                        th{
+                            text-transform: capitalize;
+                            font-family: $IndieF;
+                            font-weight: bold;
+                            font-size: 18px;
+                            color:#000;
+                        }
+                        td{
+                            a{
+                                text-decoration: none;
+                                color:blue;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                }
+                .boxInfoDish{
+                    float:left;
+                    width: 450px;
+                    height: auto;
+                    background: #fff;
+                    .img{
+                        width:100%;
+                        height: 300px;
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    .info{
+                        h3{
+                            margin: 10px;
+                            font-size: 20px;
+                            font-family: $IndieF;
+                            text-align: center;
+                            text-transform: capitalize;
+                        }
+                        p{
+                            padding:10px;
+                            font-family: $Inconsolata;
+                        }
+                        a{
+                            display: inline-block;
+                            text-decoration: none;
+                            font-family: $IndieF;
+                            font-size: 18px;
+                            text-transform: capitalize;
+                            padding:10px;
+                            color:blue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // AND FOODMENU PAGE
 
 }
 // MODAL
