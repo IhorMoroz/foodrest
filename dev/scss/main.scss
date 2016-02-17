@@ -668,7 +668,6 @@ section{
         .tableBooking{
             padding:10px 0px;
             height: auto;
-            border:1px solid red;
             h2{
                 text-align: center;
                 text-transform: capitalize;
@@ -686,10 +685,26 @@ section{
                 .boxDate{
                     display: inline-block;
                     vertical-align: top;
+                    .container{
+                        margin:22px 0px 0px 0px;
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 300px;
+                    }
+                    button{
+                        text-transform: capitalize;
+                        margin:22px 0px 0px 0px;
+                        padding: 6px 10px;
+                        background: #EEE;
+                        font-family: $Inconsolata;
+                        border: 1px solid #CCCCCC;
+                        border-radius: 4px;
+                    }
                 }
                 .colorInfo{
                     float:right;
                     p{
+                        margin:3px 0px 0px 0px;
                         .colorFree{
                             display: inline-block;
                             border-radius: 50%;

@@ -14,9 +14,12 @@
     "bower_components",
     "test",
     "tests"
-],
-"devDependencies": {
-    "jquery" : "latest",
-    "reset-css" : "latest"
-}
+  ],
+  "devDependencies": {
+    "jquery": "latest",
+    "reset-css": "latest"
+  },
+  "dependencies": {
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37"
+  }
 }
