@@ -810,26 +810,14 @@ section{
                     cursor: pointer;
                 }
                 .middleT{
-                    vertical-align: top;
-                    position: relative;
-                    display: inline-block;
-                    margin: 50px;
+                    @extend .smallT;
                     width: 80px;
                     height: 50px;
-                    border-radius:5px;
-                    background: gray;
-                    cursor: pointer;
                 }
                 .bigT{
-                    vertical-align: top;
-                    position: relative;
-                    display: inline-block;
-                    margin: 50px;
+                    @extend .smallT;
                     width: 110px;
                     height: 50px;
-                    border-radius:5px;
-                    background: gray;
-                    cursor: pointer;
                 }
                 .free{
                     background: green;
@@ -849,6 +837,144 @@ section{
         }
     }
     // AND TABLE BOOKING
+    // USER AREA
+    .backUserArea{
+        background: url("../img/back/back4.png");
+        .userArea{
+            padding:30px 0px;
+            ul{
+                border: none;
+            }
+            .nav-tabs{
+                a{
+                    font-family: $IndieF;
+                    font-size: 18px;
+                    color:#fff;
+                    &:hover{
+                        color:#000;
+                    }
+                }
+                .active{
+                    a{
+                        color:#000;
+                    }
+                }
+            }
+            .tab-pane{
+                background: #fff;
+                border-radius: 4px;
+                padding: 20px;
+                height: auto;
+            }
+            #table{
+                &>div{
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 287px;
+                    padding: 20px;
+                    height: auto;
+                    border: 1px solid;
+                    border-radius: 5px;
+                    h3{
+                        text-align: center;
+                        text-transform: capitalize;
+                        font-family: $IndieF;
+                        font-size: 20px;
+                    }
+                }
+                .tableView{
+                    background: url("../img/back/back_menu.png");
+                    h3{
+                        color:#fff;
+                    }
+                    span{
+                        display: block;
+                        font-family: $Inconsolata;
+                        font-size: 18px;
+                        text-align: center;
+                        line-height: 48px;
+                        color:#fff;
+                    }
+                    .Chair1{
+                        position: absolute;
+                        top:-27px;
+                        left:13px;
+                        border-top: 5px solid $mainColor;
+                        border-radius: 0px 0px 5px 5px;
+                        background: #fff;
+                        width: 25px;
+                        height: 20px;
+                    }
+                    .Chair2{
+                        @extend .Chair1;
+                        left:43px;
+                    }
+                    .Chair3{
+                        @extend .Chair1;
+                        left:73px;
+                    }
+                    .Chair4{
+                        position: absolute;
+                        border-right: 5px solid $mainColor;
+                        border-radius: 5px 0px 0px 5px;
+                        background: #fff;
+                        width: 20px;
+                        height: 25px;
+                        top:13px;
+                        right:-27px;
+                    }
+                    .Chair5{
+                        position: absolute;
+                        border-bottom: 5px solid $mainColor;
+                        border-radius: 5px 5px 0px 0px;
+                        background: #fff;
+                        width: 25px;
+                        height: 20px;
+                        top:57px;
+                        right:12px;
+                    }
+                    .Chair6{
+                        @extend .Chair5;
+                        right:42px;
+                    }
+                    .Chair7{
+                        @extend .Chair5;
+                        right:72px;
+                    }
+                    .Chair8{
+                        position: absolute;
+                        border-left: 5px solid $mainColor;
+                        border-radius: 0px 5px 5px 0px;
+                        background: #fff;
+                        width: 20px;
+                        height: 25px;
+                        top:13px;
+                        left:-27px;
+                    }
+                    .smallT{
+                        margin: 45px auto;
+                        position: relative;
+                        display: block;
+                        width: 50px;
+                        height: 50px;
+                        border-radius:5px;
+                        background: green;
+                    }
+                    .middleT{
+                        @extend .smallT;
+                        width: 80px;
+                        height: 50px;
+                    }
+                    .bigT{
+                        @extend .smallT;
+                        width: 110px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+    // AND USER AREA
 
 }
 // MODAL
