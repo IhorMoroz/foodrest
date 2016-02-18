@@ -80,11 +80,16 @@ header{
                     display: inline-block;
                     vertical-align: top;
                     height: 40px;
+                    &>span{
+                        margin:12px 0px 0px 0px;
+                        color: green;
+                    }
                     a{
                         color:#000;
                         float:right;
                         outline: none;
                         text-decoration: none;
+                        text-transform: capitalize;
                         transition: all .3s;
                         &:hover{
                             color:$mainColor;
@@ -664,7 +669,30 @@ section{
     // AND FOODMENU PAGE
     // TABLE BOOKING
     .backTableBooking{
+        position: relative;
         background: url("../img/back/carbon.png");
+        &:after{
+            position: absolute;
+            bottom:-100px;
+            right:0;
+            content:"";
+            width: 100px;
+            height: 200px;
+            background: url("../img/back/back_deco3.png") no-repeat;
+            background-size: cover;
+            z-index: 102;
+        }
+        &:before{
+            position: absolute;
+            bottom:-100px;
+            left:0;
+            content:"";
+            width: 100px;
+            height: 200px;
+            background: url("../img/back/back_deco2.png") no-repeat;
+            background-size: cover;
+            z-index: 102;
+        }
         .tableBooking{
             padding:10px 0px;
             height: auto;
@@ -699,6 +727,18 @@ section{
                         font-family: $Inconsolata;
                         border: 1px solid #CCCCCC;
                         border-radius: 4px;
+                    }
+                }
+                h4{
+                    margin:22px 0px 0px 90px;
+                    display: inline-block;
+                    font-size: 20px;
+                    font-family: $IndieF;
+                    line-height: 33px;
+                    a{
+                        text-decoration: none;
+                        color:green;
+                        font-weight: bold;
                     }
                 }
                 .colorInfo{
