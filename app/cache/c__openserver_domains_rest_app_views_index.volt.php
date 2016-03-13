@@ -60,7 +60,7 @@
             </div>
         </header>
         <section>
-            {{content()}}
+            <?php echo $this->getContent(); ?>
         </section>
         <footer>
             <div id="map"></div>

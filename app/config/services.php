@@ -12,6 +12,8 @@ use Phalcon\Mvc\View\Engine\Volt as VoltEngine;
 use Phalcon\Mvc\Model\Metadata\Memory as MetaDataAdapter;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Flash\Direct as Flash;
+use Phalcon\Mvc\Dispatcher;
+use Phalcon\Events\Manager as EventsManager;
 
 /**
  * The FactoryDefault Dependency Injector automatically register the right services providing a full stack framework
@@ -95,4 +97,23 @@ $di->setShared('session', function () {
     $session->start();
 
     return $session;
+});
+
+$di->set('dispatcher', function () {
+
+    // Создаем менеджер событий
+    $eventsManager = new EventsManager();
+
+    // Плагин безопасности слушает события, инициированные диспетчером
+    $eventsManager->attach('dispatch:beforeExecuteRoute', new SecurityPlugin);
+
+    // Отлавливаем исключения и not-found исключения, используя NotFoundPlugin
+    $eventsManager->attach('dispatch:beforeException', new NotFoundPlugin);
+
+    $dispatcher = new Dispatcher();
+
+    // Связываем менеджер событий с диспетчером
+    $dispatcher->setEventsManager($eventsManager);
+
+    return $dispatcher;
 });
