@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,9 +31,22 @@
                         <p class="orderTime">Order food 24/7</p>
                         <a href="tel:0895743456" class="phone">089573456</a>
                         <div class="box">
-                            <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
-                            <a href="#" class="exit">EXIT</a>
-                            <a href="#" data-toggle="modal" data-target="#login">ihor moroz</a>
+                            <?php if(!empty($fullName)){ ?>
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                                <form method="POST" action="" style="float:right;margin:10px 0px;padding:0;">
+                                    <input type="hidden" name="exit" value="1" />
+                                    <button type="submit" class="exit" style="cursor:pointer;background:none;border:none;margin:0;padding:0;">
+                                        EXIT
+                                    </button>
+                                </form>
+                                <a href="#" data-toggle="modal" data-target="#login">
+                                    <?php echo $fullName; ?>
+                                </a>
+                            <?php }else{ ?>
+                                <a href="#" data-toggle="modal" data-target="#login">
+                                    Login
+                                </a>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -111,19 +128,19 @@
               </div>
               <form action="" method="POST">
                   <div class="modal-body">
-                        <span>You name</span>
+                        <span>*You name</span>
                         <input type="text" name="Crname">
-                        <span>You Surname</span>
+                        <span>*You Surname</span>
                         <input type="text" name="Crsurname">
-                        <span>You Login</span>
+                        <span>*You Login</span>
                         <input type="text" name="Crlogin">
                         <span>You Email</span>
                         <input type="email" name="Cremail">
                         <span>You Phone</span>
                         <input type="password" name="Crphone">
-                        <span>You Password</span>
+                        <span>*You Password</span>
                         <input type="password" name="Crpass">
-                        <span>Repeat Password</span>
+                        <span>*Repeat Password</span>
                         <input type="password" name="Crpasstwo">
                   </div>
                   <div class="modal-footer">

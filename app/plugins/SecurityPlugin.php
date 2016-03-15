@@ -89,10 +89,10 @@ class SecurityPlugin extends Plugin
             // Если доступа нет, перенаправляем его на контроллер "index".
             $this->flash->error("У вас нет доступа к данному модулю");
             $dispatcher->forward(
-                array(
+                [
                     'controller' => 'index',
                     'action'     => 'index'
-                )
+                ]
             );
             // Возвращая "false" мы приказываем диспетчеру прервать текущую операцию
             return false;
