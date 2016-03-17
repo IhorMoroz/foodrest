@@ -8,6 +8,9 @@ class ControllerBase extends Controller
 
     public function onConstruct()
     {
+        $mMenu = new main_menu();
+        $this->view->setVar('menu', $mMenu->getMenu());
+
         $sesUser = $this->session->get('auth');
         if(!empty($sesUser)) $this->_showUser($sesUser);
 
@@ -89,6 +92,9 @@ class ControllerBase extends Controller
 
     }
 
+    /**
+     * register user
+     */
     public function registrationAction()
     {
         $name = strip_tags($this->request->getPost('Crname'));

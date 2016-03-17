@@ -1,72 +1,17 @@
+<?php
+
+?>
 <div class="backFoodMenu AbsBox">
     <div class="foodMenu SiteBox">
         <ul>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_special.png" alt="">
-                    <h4>Special</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_coffee.png" alt="">
-                    <h4>coffee</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_desert.png" alt="">
-                    <h4>desert</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_fish.png" alt="">
-                    <h4>fish</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_pizza.png" alt="">
-                    <h4>pizza</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_salat.png" alt="">
-                    <h4>salat</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_soda.png" alt="">
-                    <h4>soda</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_soup.png" alt="">
-                    <h4>soup</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_steak.png" alt="">
-                    <h4>steak</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_tea.png" alt="">
-                    <h4>tea</h4>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="/public/img/menu_wine.png" alt="">
-                    <h4>wine</h4>
-                </a>
-            </li>
+            <?php foreach ($typeMenu as $item) { ?>
+                <li>
+                    <a href="<?php echo $item->href; ?>">
+                        <img src="/public/img/<?php echo $item->image; ?>" alt="<?php echo $item->name; ?>">
+                        <h4><?php echo $item->name; ?></h4>
+                    </a>
+                </li>
+            <?php } ?>
         </ul>
         <div class="content">
             <div class="boxInfoDish">
@@ -82,33 +27,20 @@
                 </div>
             </div>
             <div class="boxList">
-                <h2>dishes</h2>
+                <h2><?php echo $titleList; ?></h2>
                 <table class="table table-hover">
                     <tr>
                         <th>name dish</th>
                         <th>gramme</th>
                         <th>price</th>
                     </tr>
-                    <tr>
-                        <td><a href="#">food1</a></td>
-                        <td>200g</td>
-                        <td>$7</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">food2</a></td>
-                        <td>230g</td>
-                        <td>$7</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">food3</a></td>
-                        <td>204g</td>
-                        <td>$7</td>
-                    </tr>
-                    <tr>
-                        <td><a href="#">food4</a></td>
-                        <td>200g</td>
-                        <td>$12</td>
-                    </tr>
+                    <?php foreach ($dishList as $item) { ?>
+                         <tr>
+                            <td><p data-show="<?php echo $item->id; ?>" class="showDish"><?php echo $item->name_dish; ?></p></td>
+                            <td><?php echo $item->weight_dish; ?><?php echo $item->type_weight_dish; ?></td>
+                            <td>$<?php echo $item->price_dish; ?></td>
+                        </tr>
+                    <?php } ?>
                 </table>
             </div>
         </div>

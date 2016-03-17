@@ -1,6 +1,6 @@
 <?php
-
-error_reporting(E_ALL);
+ini_set('display_errors','Off');
+//error_reporting(E_ALL);
 
 define('APP_PATH', realpath('..'));
 

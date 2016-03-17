@@ -1,6 +1,5 @@
 <?php
 
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,10 +57,9 @@
                     </div>
                     <div class="right">
                         <ul>
-                            <li><a href="/">home</a></li>
-                            <li><a href="/news">news</a></li>
-                            <li><a href="/menu">menu</a></li>
-                            <li><a href="#">delivery</a></li>
+                            <?php foreach ($menu as $item) { ?>
+                                <li><a href="<?php echo $item->href; ?>"><?php echo $item->text; ?></a></li>
+                            <?php } ?>
                         </ul>
                         <div class="box">
                             <a href="/table">table booking</a>
@@ -150,6 +148,7 @@
             </div>
           </div>
         </div>
+
         <script>
             function initMap() {
               var map = new google.maps.Map(document.getElementById('map'), {

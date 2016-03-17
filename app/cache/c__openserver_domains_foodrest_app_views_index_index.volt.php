@@ -1,3 +1,6 @@
+<?php
+echo $this->getContent();
+?>
 <!-- Carousel -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->

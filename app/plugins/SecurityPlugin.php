@@ -87,7 +87,7 @@ class SecurityPlugin extends Plugin
         $allowed = $acl->isAllowed($role, $controller, $action);
         if ($allowed != Acl::ALLOW) {
             // Если доступа нет, перенаправляем его на контроллер "index".
-            $this->flash->error("У вас нет доступа к данному модулю");
+            $this->flash->error("do you not have rights");
             $dispatcher->forward(
                 [
                     'controller' => 'index',
